@@ -3,8 +3,6 @@ import Pages from "./pages/Pages";
 import Search from "./componants/Search";
 import { BrowserRouter, Link } from "react-router-dom";
 import styled from "styled-components";
-import { SiIfood } from "react-icons/si";
-import { BsFillSuitHeartFill } from "react-icons/bs";
 import Navbar from "./componants/Navbar";
 
 function App() {

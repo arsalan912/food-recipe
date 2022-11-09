@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { SiIfood } from "react-icons/si";
-import { BsFillSuitHeartFill } from "react-icons/bs";
 
 function Navbar() {
   return (
@@ -11,10 +10,6 @@ function Navbar() {
           F<SiIfood />D
         </Logo>
       </LogoContainer>
-      <Favotite to={"/fav"}>
-        <span>Favorite</span>
-        <BsFillSuitHeartFill />
-      </Favotite>
     </Nav>
   );
 }
@@ -55,33 +50,6 @@ const LogoContainer = styled(Link)`
   text-decoration: none;
   svg {
     color: #f7bebe;
-  }
-`;
-const Favotite = styled(Link)`
-  display: flex;
-  margin-right: 2rem;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.5rem;
-  background: white;
-  padding: 1rem 1rem;
-  border-radius: 2rem;
-  text-decoration: none;
-  color: #444444;
-  cursor: pointer;
-  span {
-    font-family: "Lobster Two", cursive;
-  }
-  :hover {
-    svg {
-      color: #f7bebe;
-    }
-  }
-  @media screen and (max-width: 550px) {
-    font-size: 1rem;
-    span {
-      display: none;
-    }
   }
 `;
 

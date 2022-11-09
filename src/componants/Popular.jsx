@@ -117,9 +117,16 @@ const Card = styled.div`
   @media screen and (max-width: 700px) {
     width: 12rem;
     height: 17rem;
+
     border-radius: 2rem;
     img {
       border-radius: 2rem;
+    }
+    .tag-pop {
+      height: 50%;
+      p {
+        padding: 0 1rem;
+      }
     }
   }
 `;
@@ -130,6 +137,9 @@ const Gradient = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  :hover {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  }
 `;
 
 export default Popular;

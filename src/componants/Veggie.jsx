@@ -140,7 +140,7 @@ const Card = styled.div`
       border-radius: 2rem;
     }
     .tag-veggie {
-      height: 40%;
+      height: 50%;
       p {
         padding: 0 1rem;
       }
@@ -154,6 +154,9 @@ const Gradient = styled.div`
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  :hover {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+  }
 `;
 
 export default Veggie;

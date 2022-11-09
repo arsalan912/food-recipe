@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { BsFillSuitHeartFill } from "react-icons/bs";
 
 function Recipe() {
   let params = useParams();
@@ -12,7 +13,6 @@ function Recipe() {
     );
     const detailData = await data.json();
     setDetails(detailData);
-    console.log(detailData);
   }
   useEffect(() => {
     fetchDetails();
@@ -21,7 +21,9 @@ function Recipe() {
   return (
     <DetailWrapper>
       <div className="title-image">
-        <h2>{details.title}</h2>
+        <div className="title-header">
+          <h2>{details.title}</h2>
+        </div>
         <img src={details.image} alt="" />
       </div>
       <Info>
@@ -62,16 +64,23 @@ const DetailWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: 4rem auto 5rem auto;
+  margin: 3rem auto 5rem auto;
+  position: relative;
   width: 100%;
   .active {
     background: #e94057;
     color: white;
     border: none;
   }
-  h2 {
+  .title-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 2rem;
   }
+  // h2 {
+  //
+  // }
   li {
     font-size: 0.9rem;
     line-height: 2.5rem;
@@ -92,6 +101,7 @@ const DetailWrapper = styled.div`
     height: 20rem;
     object-fit: cover;
   }
+
   @media screen and (max-width: 500px) {
     li {
       font-size: 0.8rem;
@@ -109,6 +119,7 @@ const DetailWrapper = styled.div`
 const Button = styled.button`
   padding: 1rem 2rem;
   height: 3rem;
+  border-radius: 1.5rem;
   color: #313131;
   background: white;
   border: 2px solid black;
@@ -136,7 +147,7 @@ const Info = styled.div`
     color: #e94057;
     text-decoration: none;
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 550px) {
     h3 {
       font-size: 0.8rem;
       line-height: 1.7rem;
@@ -148,6 +159,22 @@ const ButtonContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+`;
+const Add = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  align-items: center;
+  top: 0;
+  right: 0;
+  background: #54b36e;
+  margin-right: 1rem;
+  color: white;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  @media screen and (max-width: 500px) {
+    font-size: 0.7rem;
+  }
 `;
 
 export default Recipe;

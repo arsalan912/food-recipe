@@ -17,7 +17,6 @@ function Couisine() {
 
   useEffect(() => {
     getCousine(params.type);
-    console.log(cuisine);
   }, [params.type]);
 
   return (
